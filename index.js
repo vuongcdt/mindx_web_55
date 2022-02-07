@@ -12,7 +12,8 @@ app.use('/assets',express.static('assets'))
 // app.use(express.json())
 
 connectToDb()
-app.listen(5015,()=>{
-    console.log("App is running at 5015");
+const port = process.env.PORT
+app.listen(port,()=>{
+    console.log("App is running at ${port}");
 })
 
